@@ -11,6 +11,7 @@ header{
     width: 100%;
     height: 100vh;
     position: relative;
+    overflow: hidden;
 }
 
 .img-wrapper{
@@ -25,12 +26,23 @@ header{
     height: 100%;
     object-fit: cover;
     opacity: 0.5;
+    animation: zoom 15s;
+}
+
+@keyframes zoom {
+    0%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+    }
 }
 
 .banner{
     position: absolute;
-   top: 60%;
-   left: 7%;
+    top: 60%;
+    left: 7%;
+    animation: movebanner 2.1s;
 }
 
 .banner h1{
@@ -39,7 +51,7 @@ header{
     font-family: 'Lato', arial;
     font-weight: 374;
     text-shadow: .29rem .38rem 3px rgba(0, 0, 0, 0.55);
-    ine-height: 3.9rem;
+    line-height: 3.9rem;
     margin-bottom: 0.8rem;
 }
 
@@ -69,6 +81,25 @@ header{
 }
 
 .banner button:hover{
-    background: #273B3B;
+    background: rgb(255, 255, 255);
+    color: #273B3B ;
+    box-shadow:  0 0 0 3px #82c6c6;
+    font-weight: 374;
+    text-shadow: none;
+    border-radius: 15px;
 }
 
+@keyframes movebanner{
+    0%{
+        transform: translateX(10rem) rotateX(-50deg); 
+        opacity: 0;
+    }
+    25%{
+        opacity: 0.01;
+    }
+    100%{
+        transform: translateX(0) rotateX(0); 
+        opacity: 1;
+    }
+    
+}
