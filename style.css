@@ -2,6 +2,15 @@
 
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css');
 
+:root{
+    --font-primaria: 'Lato', 'arial';
+    --font-secundaria: 'Noto Sans TC', 'serif';
+    --cor-primaria: #44bbbb;
+    --cor-primaria-ecura: #273b3b;
+    --cor-primaria-clara: #82c6c6;
+    --cor-secundaria: #318787;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -48,7 +57,7 @@ header{
 .banner h1{
     color: #e2e2e2;
     font-size: 3.5rem;
-    font-family: 'Lato', arial;
+    font-family: var(--font-primaria);
     font-weight: 374;
     text-shadow: .29rem .38rem 3px rgba(0, 0, 0, 0.55);
     line-height: 3.9rem;
@@ -56,7 +65,7 @@ header{
 }
 
 .banner p{
-    font-family: 'Noto Sans TC', 'serif';
+    font-family: var(--font-secundaria);
     color: #dfffff;
     font-size: 1.8rem;
     margin-bottom: 0.8rem;
@@ -64,15 +73,15 @@ header{
 }
 
 .banner button{
-    font-family: 'Noto Sans Tc', 'serfi';
+    font-family: var(--font-secundaria);
     font-weight: 200;
     font-size: 1rem;
     text-shadow: .09rem .09rem 8px  rgba(0, 0, 0, 1);
     text-transform: ;
     letter-spacing: .04rem;
     background: #273B3B;
-    background: -webkit-linear-gradient(to right, #318787, #273B3B);
-    background: linear-gradient(to right, #318787, #273B3B);
+    background: -webkit-linear-gradient(to right, var(--cor-secundaria), var(--cor-primaria-ecura));
+    background: linear-gradient(to right, var(--cor-secundaria), var(--cor-primaria-ecura));
     color: white;
     padding: .4rem .9rem;
     border: none;
@@ -82,8 +91,8 @@ header{
 
 .banner button:hover{
     background: rgb(255, 255, 255);
-    color: #273B3B ;
-    box-shadow:  0 0 0 3px #82c6c6;
+    color: var(--cor-primaria-ecura) ;
+    box-shadow:  0 0 0 3px var(--cor-primaria-clara);
     font-weight: 374;
     text-shadow: none;
     border-radius: 15px;
