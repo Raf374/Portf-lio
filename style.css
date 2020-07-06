@@ -5,6 +5,7 @@
 :root{
     --font-primaria: 'Lato', 'arial';
     --font-secundaria: 'Noto Sans TC', 'serif';
+    --font-ação: Helvetica, sans-serif;
     --cor-primaria: #44bbbb;
     --cor-primaria-ecura: #273b3b;
     --cor-primaria-clara: #82c6c6;
@@ -14,6 +15,9 @@
 *{
     margin: 0;
     padding: 0;
+    list-style: none;
+    text-decoration: none;
+
 }
 
 .hamburguer{
@@ -29,7 +33,6 @@
     opacity: 0.473;
     display: flex;
     flex-direction: column;
-    
     cursor: pointer;
     align-items: center;
 }
@@ -151,4 +154,37 @@ header{
         opacity: 1;
     }
     
+}
+
+.sidebar{
+    width: 20rm;
+    height: 100vh;
+    background-color: var(--cor-primaria-clara);
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.menu{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu-item{
+    text-align: center;
+    margin-bottom: .3rem;
+}
+
+.menu-link{
+    font-family: var(--font-ação);
+    font-size: 1.743rem;
+    color: rgb(230, 240, 240);
+    transition: color .5s;
+}
+
+.menu-link:hover{
+    color: #f7b1ac;
+    text-shadow: .06rem .06rem 1px rgba(105, 105, 105, .7);
 }
