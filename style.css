@@ -36,7 +36,7 @@
     flex-direction: column;
     cursor: pointer;
     align-items: center;
-    transition: all .374s;
+    transition: all .5s;
 }
 
 .hamburguer.show-menu{
@@ -44,13 +44,31 @@
     background-color: var(--cor-primaria-ecura);
 }
 
+
+.hamburguer.show-menu #line1{
+    transform: rotate(45deg) translate(.25rem, .25rem);
+     
+}
+    
+.hamburguer.show-menu #line2{
+    opacity: 0;
+}
+    
+.hamburguer.show-menu #line3{
+    transform: rotate(-45deg) translate(.39rem, -.50rem);
+    
+}
+    
+
 .line{
     width: 40%;
-    height: .2rem;
+    height: .18rem;
     background-color: white;
     position: relative;
-    margin-top: 5px;
-    top: 9.5px;
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
+    top: 12.5px;
+    transition: .5s;
 }
 
 @keyframes move-hamburguer{
