@@ -3,8 +3,8 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css');
 
 :root{
-    --font-primaria: 'Lato', 'arial';
-    --font-secundaria: 'Noto Sans TC', 'serif';
+    --font-primaria: 'Lato', 'arial'; 
+    --font-secundaria: 'Noto Sans TC', 'serif'; 
     --font-ação: Helvetica, sans-serif;
     --cor-primaria: #44bbbb;
     --cor-primaria-ecura: #273b3b;
@@ -271,12 +271,36 @@ header{
     color: var(--cor-laranja-em-shock) ;
 }
 
+.sessao-conhecimentos{
+    background-color: #e2e2e2;
+}
+
 .conhecimentos{
     display: grid;
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(6, 4 rem);
     row-gap: 1.5rem;
-    background-color: ;
+    margin-top: 1.5rem;
+}
+
+.conhecimento-header{
+    display: flex;
+    align-items: center;
+    color: var(--cor-secundaria);
+    font-family: var(--font-secundaria);
+}
+
+.conhecimento-header h3{
+    padding-left: .6rem;
+    font-size: 1.374rem;
+}
+
+.conhecimento-text{
+    font-family: var(--font-secundaria);
+}
+
+.conhecimento-header i{
+    font-size: 2rem;
 }
 
 .conhecimento:nth-child(1){
@@ -317,8 +341,18 @@ header{
 
 .sessao-header h1{
     font-family: var(--font-secundaria);
-
+    font-size: 3rem;
+    text-shadow: .08rem .08rem 2px rgba(105, 105, 105, .7);
+    border-bottom: solid rgba(49, 135, 135, .5) 3px;
 }
 
+.conhecimentos-img-wrapper{
+    grid-column: 7/11;
+    grid-row: 2/5;
+    width: 100%;
+}
 
-
+.conhecimentos-img-wrapper img{
+    object-fit: cover;
+    width: 100%;
+}
