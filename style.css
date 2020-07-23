@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100;300;400&display=swap');
 
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css');
@@ -218,6 +217,7 @@ header{
     top: 0;
     right: -20rem;
     transition: all .374s;
+    z-index: 1;
 }
 
 
@@ -368,9 +368,15 @@ header{
 }
 
 .card{
-    width: 15rem;
-    height: 20rem;
+    width: 20rem;
+    height: 25rem;
     position: relative;
+}
+
+.card:hover .card-info{
+    bottom: 2rem;
+    opacity: 1;
+    visibility: visible;
 }
 
 .card-img-wrapper{
@@ -384,13 +390,69 @@ header{
     object-fit: cover;
     width: 100%;
     height: 100%;
-    opacity: .7;
+    opacity: .8;
     border-radius: .5rem;
+    transition: opacity .5s;
+}
+
+.card:hover .card-img-wrapper img{
+    opacity: .374;
 }
 
 .card-info{
+    opacity: 0;
+    visibility: hidden;
     position: absolute;
-    bottom: 0rem;
+    bottom: 0;
     padding: 2rem;
-    text-shadow: 0 .1 0.3rem rgba(105, 105, 105, .3);
+    text-shadow: .3rem .1rem 0.3rem rgba(105, 105, 105, .3);
+    transition: all .5s;
 }
+
+.card-info h2{
+    font-family: var(--font-primaria);
+    font-size: 500;
+    color: #80ffff;
+} 
+
+.card-info h3{
+    font-family: var(--font-secundaria);
+    font-size: 374;
+    color: var(--cor-primaria-clara);
+    margin-bottom: .1rem;
+}
+
+.card-info p{
+    font-family: var(--font-ação);
+    font-size: 100;
+    color: #d7ffff; 
+    margin-bottom: .55rem;
+
+}
+
+.card-info button{
+    font-family: var(--font-secundaria);
+    font-weight: 200;
+    font-size: 1rem;
+    text-shadow: .09rem .09rem 8px  rgba(0, 0, 0, 1);
+    letter-spacing: .04rem;
+    background: #273B3B;
+    background: -webkit-linear-gradient(to right, var(--cor-secundaria), var(--cor-primaria-ecura));
+    background: linear-gradient(to right, var(--cor-secundaria), var(--cor-primaria-ecura));
+    color: white;
+    padding: .2rem .45rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.card-info button:hover{
+    background: rgb(255, 255, 255);
+    color: var(--cor-primaria-ecura) ;
+    box-shadow:  0 0 0 3px var(--cor-primaria-clara);
+    font-weight: 374;
+    text-shadow: none;
+    border-radius: 15px;
+}
+
+
