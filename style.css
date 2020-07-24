@@ -506,6 +506,10 @@ header{
     position: relative;
 }
 
+.input-group input{
+    margin-bottom: 2rem;
+}
+
 .field{
     background: transparent;
     border: none;
@@ -518,10 +522,16 @@ header{
     margin: 1rem 0;
 }
 
+.input-group textarea {
+    padding-top: 1rem;
+    max-width: 25rem;
+    max-height: 3rem;
+  }
+
 .field-label{
     position: absolute;
-    left: 0.7rem;
-    top: 1rem;
+    left: 0;
+    top: 1.7rem;
     font-size: 1.2rem;
     font-family: var(--font-secundaria);
     text-transform: uppercase;
@@ -529,5 +539,36 @@ header{
 
 .field:focus ~ label{
     top: 0;
+    font-size: 0.743rem;
+    transition: all .3s;
 }
 
+.btn-submit{
+    text-transform: uppercase;
+    font-family: var(--font-secundaria);
+    font-weight: 100;
+    font-size: 1.2rem;
+    text-shadow: .09rem .09rem 8px  rgba(0, 0, 0, 1);
+    letter-spacing: .04rem;
+    background: #273B3B;
+    background: -webkit-linear-gradient(to right, #551e1a, #ed4b3e);
+    background: linear-gradient(to right, #551e1a, #ed4b3e);
+    width: 70%;
+    height: 2.5rem;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 1rem;
+    letter-spacing: 0.2rem;
+    align-items: center;
+}
+
+.btn-submit:hover{
+    background: rgb(255, 255, 255);
+    color: var(--cor-primaria-ecura) ;
+    box-shadow:  0 0 0 3px var(--cor-primaria-clara);
+    font-weight: 374;
+    text-shadow: none;
+    border-radius: 15px;
+}
